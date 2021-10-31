@@ -16,6 +16,10 @@
     <GROUP id="{57BC3415-EF25-0913-A2FF-CDDED5BF845E}" name="DSP">
       <FILE id="Dr6XHr" name="Reverb_Main.cpp" compile="1" resource="0" file="Source/Reverb_Main.cpp"/>
       <FILE id="fGYj7n" name="Reverb_Main.h" compile="0" resource="0" file="Source/Reverb_Main.h"/>
+      <FILE id="Ma2Hlf" name="Reverb_Filters.cpp" compile="1" resource="0"
+            file="Source/Reverb_Filters.cpp"/>
+      <FILE id="XnO6KN" name="Reverb_Filters.h" compile="0" resource="0"
+            file="Source/Reverb_Filters.h"/>
       <FILE id="xoFv0W" name="Reverb_CircularBuffer.cpp" compile="1" resource="0"
             file="Source/Reverb_CircularBuffer.cpp"/>
       <FILE id="wZjAq3" name="Reverb_CircularBuffer.h" compile="0" resource="0"
