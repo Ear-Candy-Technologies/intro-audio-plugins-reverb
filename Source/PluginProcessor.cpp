@@ -13,6 +13,10 @@ Reverb_MasterClassAudioProcessor::Reverb_MasterClassAudioProcessor()
                        ), parameters(*this, nullptr, juce::Identifier("PARAMETERS"), initializeGUI())
 #endif
 {
+    for (int i = 0; i < getTotalNumInputChannels(); i++)
+    {
+        ptrReverb[i] = std::make_unique<Reverb_Main>();
+    }
 }
 
 Reverb_MasterClassAudioProcessor::~Reverb_MasterClassAudioProcessor(){}
@@ -138,7 +142,10 @@ void Reverb_MasterClassAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     for (int channel = 0; channel < totalNumInputChannels; ++channel)
     {
         auto* channelData = buffer.getWritePointer (channel);
-
+        
+        ptrReverb[channel]->processReverb(channelData,
+                                          channelData,
+                                          buffer.getNumSamples());
     }
 }
 

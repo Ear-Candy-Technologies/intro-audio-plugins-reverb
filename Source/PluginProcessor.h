@@ -1,6 +1,7 @@
 #pragma once
 #include <JuceHeader.h>
 #include "Reverb_Helpers.h"
+#include "Reverb_Main.h"
 
 class Reverb_MasterClassAudioProcessor  : public juce::AudioProcessor
 {
@@ -38,7 +39,7 @@ public:
 
 private:
 
-    
+    std::unique_ptr<Reverb_Main> ptrReverb[4];
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (Reverb_MasterClassAudioProcessor)
 };
