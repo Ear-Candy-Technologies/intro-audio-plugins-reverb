@@ -35,16 +35,16 @@ juce::AudioProcessorValueTreeState::ParameterLayout Reverb_MasterClassAudioProce
     //VOLUMEN SLIDER
     params.push_back(std::make_unique<juce::AudioParameterFloat>(REV_TIME_ID,
                                                                  REV_TIME_NAME,
-                                                                 0.0f,
+                                                                 0.01f,
                                                                  1.0f,
-                                                                 0.0f));
+                                                                 0.01f));
     
     //VOLUMEN SLIDER
     params.push_back(std::make_unique<juce::AudioParameterFloat>(PRE_DELAY_ID,
                                                                  PRE_DELAY_NAME,
                                                                  0.0f,
-                                                                 1.0f,
-                                                                 0.0f));
+                                                                 500.0f,
+                                                                 0.1f));
     
     return {params.begin(),params.end()};
 }
@@ -145,7 +145,11 @@ void Reverb_MasterClassAudioProcessor::processBlock (juce::AudioBuffer<float>& b
         
         ptrReverb[channel]->processReverb(channelData,
                                           channelData,
-                                          buffer.getNumSamples());
+                                          buffer.getNumSamples(),
+                                          channel,
+                                          *parameters.getRawParameterValue(PRE_DELAY_ID),
+                                          *parameters.getRawParameterValue(REV_TIME_ID),
+                                          *parameters.getRawParameterValue(REV_MIX_ID));
     }
 }
 

@@ -9,7 +9,13 @@ public:
     
     void prepareReverb(double inSampleRate, int inNumChannels);
     
-    void processReverb(float* inAudio, float* outAudio, int inNumSamples);
+    void processReverb(float* inAudio,
+                       float* outAudio,
+                       int inNumSamples,
+                       int inChannel,
+                       float inPreDelay,
+                       float inTime,
+                       float inMix);
     
 private:
     
