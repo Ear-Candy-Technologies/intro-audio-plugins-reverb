@@ -23,7 +23,6 @@ void Reverb_Main::processReverb(float* inAudio,
                                 float inTime,
                                 float inMix)
 {
-    
     float preDelaySec = inPreDelay * 0.001;
     float preDelayInSamples = preDelaySec * mySampleRate;
     
@@ -33,8 +32,10 @@ void Reverb_Main::processReverb(float* inAudio,
     {
         float sample = inAudio[i];
         
-        float preDelaySample = preDelay.processSample(sample, inChannel);
+        float reverb = preDelay.processSample(sample, inChannel);
         
-        outAudio[i] = sample + (preDelaySample * 0.5f);
+        float y = (1.0f - inMix) * sample + inMix * reverb;
+        
+        outAudio[i] = y;
     }
 }
