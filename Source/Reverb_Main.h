@@ -1,4 +1,5 @@
 #pragma once
+#include "Reverb_CircularBuffer.h"
 
 class Reverb_Main
 {
@@ -18,6 +19,8 @@ public:
                        float inMix);
     
 private:
+    
+    reverb_CirculaBuffer preDelay;
     
     double mySampleRate;
     int numChannels;

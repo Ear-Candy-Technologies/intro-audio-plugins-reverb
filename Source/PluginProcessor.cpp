@@ -105,7 +105,14 @@ const juce::String Reverb_MasterClassAudioProcessor::getProgramName (int index)
 
 void Reverb_MasterClassAudioProcessor::changeProgramName (int index, const juce::String& newName){}
 
-void Reverb_MasterClassAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock){}
+void Reverb_MasterClassAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
+{
+    for (int i = 0; i < getTotalNumInputChannels(); i++)
+    {
+        ptrReverb[i]->prepareReverb(sampleRate,
+                                    getTotalNumInputChannels());
+    }
+}
 
 void Reverb_MasterClassAudioProcessor::releaseResources(){}
 
