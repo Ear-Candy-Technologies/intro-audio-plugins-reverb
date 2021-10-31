@@ -63,4 +63,3 @@ float reverb_CirculaBuffer::processSample(float x, int channel)
         return y;
     }
 }
-

@@ -1,6 +1,6 @@
 #pragma once
 #include "math.h"
-#include "Reverb_MathHelpers.h"
+#include "Reverb_Helpers.h"
 
 const int MAX_BUFFER_SIZE = 192000;
 

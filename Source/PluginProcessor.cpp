@@ -10,12 +10,40 @@ Reverb_MasterClassAudioProcessor::Reverb_MasterClassAudioProcessor()
                       #endif
                        .withOutput ("Output", juce::AudioChannelSet::stereo(), true)
                      #endif
-                       )
+                       ), parameters(*this, nullptr, juce::Identifier("PARAMETERS"), initializeGUI())
 #endif
 {
 }
 
 Reverb_MasterClassAudioProcessor::~Reverb_MasterClassAudioProcessor(){}
+
+juce::AudioProcessorValueTreeState::ParameterLayout Reverb_MasterClassAudioProcessor::initializeGUI()
+{
+    std::vector <std::unique_ptr<juce::RangedAudioParameter>> params;
+    
+    //VOLUMEN SLIDER
+    params.push_back(std::make_unique<juce::AudioParameterFloat>(REV_MIX_ID,
+                                                                 REV_MIX_NAME,
+                                                                 0.0f,
+                                                                 1.0f,
+                                                                 0.0f));
+    
+    //VOLUMEN SLIDER
+    params.push_back(std::make_unique<juce::AudioParameterFloat>(REV_TIME_ID,
+                                                                 REV_TIME_NAME,
+                                                                 0.0f,
+                                                                 1.0f,
+                                                                 0.0f));
+    
+    //VOLUMEN SLIDER
+    params.push_back(std::make_unique<juce::AudioParameterFloat>(PRE_DELAY_ID,
+                                                                 PRE_DELAY_NAME,
+                                                                 0.0f,
+                                                                 1.0f,
+                                                                 0.0f));
+    
+    return {params.begin(),params.end()};
+}
 
 const juce::String Reverb_MasterClassAudioProcessor::getName() const
 {
