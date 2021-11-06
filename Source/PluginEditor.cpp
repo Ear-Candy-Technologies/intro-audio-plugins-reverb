@@ -15,7 +15,7 @@ void Reverb_MasterClassAudioProcessorEditor::paint (juce::Graphics& g)
 
     g.setColour (juce::Colours::white);
     g.setFont (15.0f);
-    g.drawFittedText ("Hello World!", getLocalBounds(), juce::Justification::centred, 1);
+    g.drawFittedText ("Reverb MasterClass", getLocalBounds(), juce::Justification::centred, 1);
 }
 
 void Reverb_MasterClassAudioProcessorEditor::resized(){}

@@ -30,14 +30,14 @@ juce::AudioProcessorValueTreeState::ParameterLayout Reverb_MasterClassAudioProce
                                                                  REV_MIX_NAME,
                                                                  0.0f,
                                                                  1.0f,
-                                                                 0.0f));
+                                                                 0.5f));
     
     //VOLUMEN SLIDER
     params.push_back(std::make_unique<juce::AudioParameterFloat>(REV_TIME_ID,
                                                                  REV_TIME_NAME,
                                                                  0.01f,
-                                                                 1.0f,
-                                                                 0.01f));
+                                                                 0.99f,
+                                                                 0.7f));
     
     //VOLUMEN SLIDER
     params.push_back(std::make_unique<juce::AudioParameterFloat>(PRE_DELAY_ID,
@@ -105,7 +105,14 @@ const juce::String Reverb_MasterClassAudioProcessor::getProgramName (int index)
 
 void Reverb_MasterClassAudioProcessor::changeProgramName (int index, const juce::String& newName){}
 
-void Reverb_MasterClassAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock){}
+void Reverb_MasterClassAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
+{
+    for (int i = 0; i < getTotalNumInputChannels(); i++)
+    {
+        ptrReverb[i]->prepareReverb(sampleRate,
+                                    getTotalNumInputChannels());
+    }
+}
 
 void Reverb_MasterClassAudioProcessor::releaseResources(){}
 
