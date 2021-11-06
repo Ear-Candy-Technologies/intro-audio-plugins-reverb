@@ -17,10 +17,10 @@ void Reverb_Main::prepareReverb(double inSampleRate,int inNumChannels)
     allPassOne.prepareFilter(mySampleRate, 0.5f, 0.8321f, 0.7f, 240.f);
     allPassTwo.prepareFilter(mySampleRate, 0.8f, 0.969f, 0.4f, 82.0f);
     
-    combFilterOne.prepareFilter(mySampleRate, 0.7f, 0.723f, 0.5f, 1426.0f);
-    combFilterTwo.prepareFilter(mySampleRate, 0.7f, 1.257f, 0.78f, 1781.0f);
-    combFilterThree.prepareFilter(mySampleRate, 0.7f, 0.893f, 0.24f, 1973.0f);
-    combFilterFour.prepareFilter(mySampleRate, 0.7f, 1.111f, 0.548f, 2098.0f);
+    combFilterOne.prepareFilter(mySampleRate, 0.7f, 0.723f, 0.5f, 330.0f);
+    combFilterTwo.prepareFilter(mySampleRate, 0.7f, 1.257f, 0.78f, 51.0f);
+    combFilterThree.prepareFilter(mySampleRate, 0.7f, 0.893f, 0.24f, 151.0f);
+    combFilterFour.prepareFilter(mySampleRate, 0.7f, 1.111f, 0.548f, 101.0f);
 }
 
 void Reverb_Main::processReverb(float* inAudio,

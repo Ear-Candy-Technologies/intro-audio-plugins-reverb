@@ -1,5 +1,6 @@
 #pragma once
 #include "Reverb_CircularBuffer.h"
+#include <JuceHeader.h>
 
 class Reverb_Filters
 {
