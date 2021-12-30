@@ -18,8 +18,6 @@ Link to @erictarrbelmont patreon: https://www.patreon.com/hackaudio/posts
 5. Copy .vst, .vst3 or .component from Builds folder to your plug-ins folder.
 6. Enjoy!
 
-* Note: In order to test the 4 and 8 configuration, first you need to make a multichannel track (4 or 8) or the plug-in will crash (tested in Reaper)
-
 ### Follow me
 
 - Twitter: https://twitter.com/anticode_
