@@ -1,4 +1,4 @@
-# Reverb MasterClass
+# Schroeder Reverb MasterClass
 
 ### By: Jesús Salvador Valdez Vázquez
 
