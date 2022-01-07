@@ -10,7 +10,6 @@ public:
     Reverb_MasterClassAudioProcessor();
     ~Reverb_MasterClassAudioProcessor() override;
 
-    
     void prepareToPlay (double sampleRate, int samplesPerBlock) override;
     void releaseResources() override;
 

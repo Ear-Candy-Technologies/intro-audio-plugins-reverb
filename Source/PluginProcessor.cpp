@@ -32,14 +32,14 @@ juce::AudioProcessorValueTreeState::ParameterLayout Reverb_MasterClassAudioProce
                                                                  1.0f,
                                                                  0.5f));
     
-    //VOLUMEN SLIDER
+    //TIME SLIDER
     params.push_back(std::make_unique<juce::AudioParameterFloat>(REV_TIME_ID,
                                                                  REV_TIME_NAME,
                                                                  0.01f,
-                                                                 0.99f,
+                                                                 0.9f,
                                                                  0.7f));
     
-    //VOLUMEN SLIDER
+    //PRE DELAY SLIDER
     params.push_back(std::make_unique<juce::AudioParameterFloat>(PRE_DELAY_ID,
                                                                  PRE_DELAY_NAME,
                                                                  0.0f,
