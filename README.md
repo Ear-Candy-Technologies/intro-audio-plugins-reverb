@@ -1,6 +1,6 @@
 # Schroeder Reverb MasterClass
 
-### By: Jesús Salvador Valdez Vázquez
+### By: Ear Candy Technologies
 
 Demo for a Schroeder reverb audio plug-in inspired by @erictarrbelmont patreon reverb.
 
