@@ -4,7 +4,16 @@
               useAppConfig="0" addUsingNamespaceToJuceHeader="0" displaySplashScreen="1"
               jucerFormatVersion="1">
   <MAINGROUP id="OsqtZs" name="ReverbMasterClass">
-    <GROUP id="{9EC74F5B-8CEC-D7DA-851B-F15BF8625DA4}" name="GUI"/>
+    <GROUP id="{9EC74F5B-8CEC-D7DA-851B-F15BF8625DA4}" name="GUI">
+      <FILE id="qLDw03" name="reverb_HeaderGUI.cpp" compile="1" resource="0"
+            file="Source/reverb_HeaderGUI.cpp"/>
+      <FILE id="iIlR5P" name="reverb_HeaderGUI.h" compile="0" resource="0"
+            file="Source/reverb_HeaderGUI.h"/>
+      <FILE id="SpbiJK" name="reverb_MainGUI.cpp" compile="1" resource="0"
+            file="Source/reverb_MainGUI.cpp"/>
+      <FILE id="bSaTtj" name="reverb_MainGUI.h" compile="0" resource="0"
+            file="Source/reverb_MainGUI.h"/>
+    </GROUP>
     <GROUP id="{31A0E23A-920F-C464-EB14-525E26B9CAFD}" name="Source">
       <FILE id="XFqpMM" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
