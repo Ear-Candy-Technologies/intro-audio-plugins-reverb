@@ -2,20 +2,24 @@
 #include "PluginEditor.h"
 
 Reverb_MasterClassAudioProcessorEditor::Reverb_MasterClassAudioProcessorEditor (Reverb_MasterClassAudioProcessor& p)
-    : AudioProcessorEditor (&p), audioProcessor (p)
+    : AudioProcessorEditor (&p), header(p), main(p), audioProcessor (p)
 {
     setSize (400, 300);
+    
+    addAndMakeVisible(header);
+    addAndMakeVisible(main);
 }
 
 Reverb_MasterClassAudioProcessorEditor::~Reverb_MasterClassAudioProcessorEditor(){}
 
 void Reverb_MasterClassAudioProcessorEditor::paint (juce::Graphics& g)
 {
-    g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));
-
-    g.setColour (juce::Colours::white);
-    g.setFont (15.0f);
-    g.drawFittedText ("Reverb MasterClass", getLocalBounds(), juce::Justification::centred, 1);
+    g.setColour(juce::Colours::lightblue);
+    g.fillAll();
 }
 
-void Reverb_MasterClassAudioProcessorEditor::resized(){}
+void Reverb_MasterClassAudioProcessorEditor::resized()
+{
+    header.setBounds(0, 0, 400, 50);
+    main.setBounds(0, 50, 400, 250);
+}

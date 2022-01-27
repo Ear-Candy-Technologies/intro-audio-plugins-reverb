@@ -11,3 +11,6 @@
 
 #define REV_TIME_ID "time"
 #define REV_TIME_NAME "Time"
+
+#define REV_BUTTON_ID "reverb"
+#define REV_BUTTON_NAME "Reverb"

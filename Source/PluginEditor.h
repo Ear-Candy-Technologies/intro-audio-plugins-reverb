@@ -1,7 +1,8 @@
 #pragma once
-
 #include <JuceHeader.h>
 #include "PluginProcessor.h"
+#include "reverb_HeaderGUI.h"
+#include "reverb_MainGUI.h"
 
 class Reverb_MasterClassAudioProcessorEditor  : public juce::AudioProcessorEditor
 {
@@ -14,6 +15,10 @@ public:
     void resized() override;
 
 private:
+    
+    reverb_HeaderGUI header;
+    
+    reverb_MainGUI main;
     
     Reverb_MasterClassAudioProcessor& audioProcessor;
 

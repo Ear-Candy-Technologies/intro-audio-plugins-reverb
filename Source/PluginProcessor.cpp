@@ -46,6 +46,11 @@ juce::AudioProcessorValueTreeState::ParameterLayout Reverb_MasterClassAudioProce
                                                                  500.0f,
                                                                  0.1f));
     
+    //REVERB BUTTON
+    params.push_back(std::make_unique<juce::AudioParameterBool> (REV_BUTTON_ID,
+                                                               REV_BUTTON_NAME,
+                                                               true));
+    
     return {params.begin(),params.end()};
 }
 
@@ -148,15 +153,18 @@ void Reverb_MasterClassAudioProcessor::processBlock (juce::AudioBuffer<float>& b
 
     for (int channel = 0; channel < totalNumInputChannels; ++channel)
     {
-        auto* channelData = buffer.getWritePointer (channel);
-        
-        ptrReverb[channel]->processReverb(channelData,
-                                          channelData,
-                                          buffer.getNumSamples(),
-                                          channel,
-                                          *parameters.getRawParameterValue(PRE_DELAY_ID),
-                                          *parameters.getRawParameterValue(REV_TIME_ID),
-                                          *parameters.getRawParameterValue(REV_MIX_ID));
+        if(*parameters.getRawParameterValue(REV_BUTTON_ID))
+        {
+            auto* channelData = buffer.getWritePointer (channel);
+            
+            ptrReverb[channel]->processReverb(channelData,
+                                              channelData,
+                                              buffer.getNumSamples(),
+                                              channel,
+                                              *parameters.getRawParameterValue(PRE_DELAY_ID),
+                                              *parameters.getRawParameterValue(REV_TIME_ID),
+                                              *parameters.getRawParameterValue(REV_MIX_ID));
+        }
     }
 }
 

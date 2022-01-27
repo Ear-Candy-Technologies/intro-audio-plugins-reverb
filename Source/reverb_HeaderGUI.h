@@ -13,7 +13,11 @@ public:
     
     void resized() override;
     
+    void createLabel();
+    
 private:
+    
+    juce::Label tituloLabel;
     
     Reverb_MasterClassAudioProcessor& audioProcessor;
     

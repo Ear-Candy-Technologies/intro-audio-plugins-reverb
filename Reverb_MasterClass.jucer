@@ -38,6 +38,8 @@
     <GROUP id="{0F194052-BCCB-BDF4-A001-E5EF07CE0AFD}" name="Helpers">
       <FILE id="JQWbrx" name="Reverb_Helpers.h" compile="0" resource="0"
             file="Source/Reverb_Helpers.h"/>
+      <FILE id="ULOqQ9" name="sliderLookAndFeel.h" compile="0" resource="0"
+            file="Source/sliderLookAndFeel.h"/>
     </GROUP>
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
