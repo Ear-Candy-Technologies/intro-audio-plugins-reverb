@@ -4,7 +4,7 @@
 
 Demo for a Schroeder reverb audio plug-in inspired by @erictarrbelmont patreon reverb.
 
-Link to video livestream for the masterclass: https://youtu.be/xILs4ZkWcJI
+Link to video livestream for the masterclass (Back-end): https://youtu.be/yE9Md8GdfDc
 
 
 Link to @erictarrbelmont patreon: https://www.patreon.com/hackaudio/posts
