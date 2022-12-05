@@ -1,4 +1,4 @@
-# Schroeder Reverb MasterClass
+# Schroeder Reverb
 
 ### By: Ear Candy Technologies
 
@@ -16,10 +16,6 @@ Link to @erictarrbelmont patreon: https://www.patreon.com/hackaudio/posts
 4. Compile
 5. Copy .vst, .vst3 or .component from Builds folder to your plug-ins folder.
 6. Enjoy!
-
-### Follow me
-
-- Twitter: https://twitter.com/anticode_
 
 ## Follow Ear Candy Technologies: 
 
