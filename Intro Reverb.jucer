@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="MSUtTd" name="Intro Reverb" projectType="audioplug" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" version="1.0.0"
+              companyName="Ear Candy Technologies" companyCopyright="Ear Candy Technologies"
+              companyWebsite="https://earcandytech.com" companyEmail="info@earcandytech.com">
+  <MAINGROUP id="OsqtZs" name="Intro Reverb">
+    <GROUP id="{31A0E23A-920F-C464-EB14-525E26B9CAFD}" name="Source">
+      <FILE id="XFqpMM" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="PJszTV" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="o7gMuD" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="S5IQOs" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+    </GROUP>
+    <GROUP id="{57BC3415-EF25-0913-A2FF-CDDED5BF845E}" name="DSP">
+      <FILE id="Dr6XHr" name="Reverb_Main.cpp" compile="1" resource="0" file="Source/Reverb_Main.cpp"/>
+      <FILE id="fGYj7n" name="Reverb_Main.h" compile="0" resource="0" file="Source/Reverb_Main.h"/>
+      <FILE id="Ma2Hlf" name="Reverb_Filters.cpp" compile="1" resource="0"
+            file="Source/Reverb_Filters.cpp"/>
+      <FILE id="XnO6KN" name="Reverb_Filters.h" compile="0" resource="0"
+            file="Source/Reverb_Filters.h"/>
+      <FILE id="xoFv0W" name="Reverb_CircularBuffer.cpp" compile="1" resource="0"
+            file="Source/Reverb_CircularBuffer.cpp"/>
+      <FILE id="wZjAq3" name="Reverb_CircularBuffer.h" compile="0" resource="0"
+            file="Source/Reverb_CircularBuffer.h"/>
+    </GROUP>
+    <GROUP id="{9EC74F5B-8CEC-D7DA-851B-F15BF8625DA4}" name="GUI">
+      <FILE id="qLDw03" name="reverb_HeaderGUI.cpp" compile="1" resource="0"
+            file="Source/reverb_HeaderGUI.cpp"/>
+      <FILE id="iIlR5P" name="reverb_HeaderGUI.h" compile="0" resource="0"
+            file="Source/reverb_HeaderGUI.h"/>
+      <FILE id="SpbiJK" name="reverb_MainGUI.cpp" compile="1" resource="0"
+            file="Source/reverb_MainGUI.cpp"/>
+      <FILE id="bSaTtj" name="reverb_MainGUI.h" compile="0" resource="0"
+            file="Source/reverb_MainGUI.h"/>
+    </GROUP>
+    <GROUP id="{0F194052-BCCB-BDF4-A001-E5EF07CE0AFD}" name="Helpers">
+      <FILE id="JQWbrx" name="Reverb_Helpers.h" compile="0" resource="0"
+            file="Source/Reverb_Helpers.h"/>
+      <FILE id="ULOqQ9" name="sliderLookAndFeel.h" compile="0" resource="0"
+            file="Source/sliderLookAndFeel.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="Intro Reverb"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="Intro Reverb"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="Libraries/JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+    <VS2022 targetFolder="Builds/VisualStudio2022">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="Intro Reverb"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="Intro Reverb"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="Libraries/JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2022>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="0"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+  </MODULES>
+</JUCERPROJECT>
